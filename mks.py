@@ -15,13 +15,30 @@ import shlex, subprocess
 from os import remove
 import os
 import re
-
+import json
 
 name_models_writted = "purged_models.txt"
 
 
 # ------------------------------------------
 
+# Return list of point fixed by geometry
+def sectors(geometry):
+    with open('./fixedPoints.json') as file:
+        data = json.load(file)
+    try:
+        return data[geometry]
+    except:
+        print("The key is not assigned to any geometry")
+        
+# Return list of geometry by point group    
+def geometries(types):
+    with open('./listGeometries.json') as file:
+        data = json.load(file)
+    try:
+        return data[types]
+    except:
+        print("The type is not recognized")
 
 # Return one file with the parameters rewritten
 def write_parameters(name_models_from_orbifolder):
