@@ -12,7 +12,7 @@ setup(
     description=DESCRIPTION,
     author="Enrique Escalante-Notario, Ignacio Portillo-Castillo, Saúl Noé Ramos-Sánchez",
     author_email="enriquescalante@gmail.com"
-    url="http://github.com/enriqueescalante",
-    install_requires=['itertools','numpy','shlex', 'subprocess','os','re']
+    url="https://github.com/enriqueescalante/makedataset",
+    install_requires=['itertools','numpy','shlex', 'subprocess','os','re','jupyter']
     scripts=[]
 )
